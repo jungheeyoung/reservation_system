@@ -33,6 +33,20 @@ public class MainActivity extends AppCompatActivity {
         textResult = (TextView)findViewById(R.id.text_result);
         timePicker.setVisibility(View.INVISIBLE); //캘린더를 처음에 보이지 않게 해줌
         calView.setVisibility(View.INVISIBLE); //캘린더를 처음에 보이지 않게 해줌 , radio버튼을 클릭하면 보이게 해줌
-        
+
+        radioDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calView.setVisibility(View.VISIBLE);
+                timePicker.setVisibility(View.INVISIBLE);
+            }//추상메소드
+        });//익명클래스로 구현
+        radioTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calView.setVisibility(View.INVISIBLE);
+                timePicker.setVisibility(View.VISIBLE);
+            }//추상메소드
+        });//익명클래스로 구현
     }
 }
